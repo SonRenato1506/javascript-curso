@@ -11,4 +11,6 @@ function multiplicar(x,y) {
     console.log(a)
 }
 
-multiplicar(3, 4)
+console.log(a)
+
+multiplicar(3, 7)

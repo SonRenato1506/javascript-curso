@@ -20,3 +20,8 @@ function contador(i) {
     }
     return somarContador
 }
+
+let meuContador = contador(5)
+meuContador()
+meuContador()
+meuContador()

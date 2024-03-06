@@ -8,3 +8,9 @@ let adicionais = {
     tetosolar: true,
     arcondicionado: true
 }
+
+console.log(carro)
+
+Object.assign(carro, adicionais)
+
+console.log(carro)

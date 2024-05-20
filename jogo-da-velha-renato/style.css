@@ -46,6 +46,7 @@ main > div {
     flex-direction: row;
 }
 
+
 .quad {
     border: 2px solid white;
     height: 100px;

@@ -9,38 +9,27 @@ let i = 0;
 
 
 function VerificarVitoria() {
-    if (q[1] == q[2] && q[1] == q[3]) {
-
-        return q[1]
-    } else if (q[1] == q[5] && q[1] == q[9]) {
-
-        return q[1]
-    } else if (q[1] == q[4] && q[1] == q[7]) {
-
-        return q[1]
-    } else if (q[2] == q[5] && q[2] == q[8]) {
-
-        return q[2]
-    } else if (q[4] == q[5] && q[4] == q[6]) {
-
-        return q[4]
-    } else if (q[7] == q[8] && q[7] == q[9]) {
-
-        return q[7]
-    } else if (q[7] == q[5] && q[7] == q[3]) {
-
-        return q[7]
-    } else if (q[3] == q[6] && q[3] == q[9]) {
-
-        return q[3]
-    } else {
+    if ((q[1] == q[2] && q[1] == q[3] && q[1] != 0) ||
+        (q[1] == q[5] && q[1] == q[9] && q[1] != 0) ||
+        (q[1] == q[4] && q[1] == q[7] && q[1] != 0)) {
+        return q[1];
+    } else if ((q[2] == q[5] && q[2] == q[8] && q[2] != 0)) {
+        return q[2];
+    } else if ((q[4] == q[5] && q[4] == q[6] && q[4] != 0)) {
+        return q[4];
+    } else if ((q[7] == q[8] && q[7] == q[9] && q[7] != 0) ||
+        (q[7] == q[5] && q[7] == q[3] && q[7] != 0)) {
+        return q[7];
+    } else if ((q[3] == q[6] && q[3] == q[9] && q[3] != 0)) {
+        return q[3];
+    }  else {
         i = 0;
-        for(let c = 1; c < 10; c++) {
+        for (let c = 1; c < 10; c++) {
             if (q[c] > 0) {
                 i++
             }
         }
-        if(i == 9) {
+        if (i == 9) {
             alert('Deu velha')
             reiniciar()
         } else {
@@ -67,12 +56,12 @@ function AlterarVitorias(x, y) {
     v2.textContent = `Jogador 2: ${y} vitórias`
 }
 
-function evento () {
+function evento() {
     if (VerificarVitoria() > 0) {
         alert(`Jogador ${VerificarVitoria()}° venceu`)
-        if(VerificarVitoria() == 1) {
+        if (VerificarVitoria() == 1) {
             scorej1++;
-        } else if (VerificarVitoria() == 2){
+        } else if (VerificarVitoria() == 2) {
             scorej2++
         }
         AlterarVitorias(scorej1, scorej2)
@@ -80,7 +69,7 @@ function evento () {
     }
 }
 
-function reiniciar () {
+function reiniciar() {
     noroeste.textContent = ""
     norte.textContent = ""
     nordeste.textContent = ""
@@ -91,7 +80,7 @@ function reiniciar () {
     centro.textContent = ""
     leste.textContent = ""
 
-    for(let s = 0; s < 10; s++) {
+    for (let s = 0; s < 10; s++) {
         q[s] = 0
     }
 }

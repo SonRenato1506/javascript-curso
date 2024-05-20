@@ -42,11 +42,11 @@ function VerificarVitoria() {
 function AlterarJogador(player) {
     if (player == 1) {
         jogador.textContent = "Jogador: 1"
-        jogador.style.color = "rgb(0, 0, 145)"
+        jogador.style.color = "rgb(0, 0, 172)"
         vez = 1;
     } else if (player == 2) {
         jogador.textContent = "Jogador: 2"
-        jogador.style.color = "rgb(145, 0, 0)"
+        jogador.style.color = "rgb(172, 0, 0)"
         vez = 2;
     }
 }

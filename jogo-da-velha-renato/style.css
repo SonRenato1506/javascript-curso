@@ -26,12 +26,14 @@ h1 {
     color: white;
     font-weight: bolder;
     font-size: 48px;
+    text-shadow: 2px  2px 2px black;
 }
 
 h2 {
     color: rgb(0, 0, 172);
     font-weight: bold;
     font-size: 28px;
+    text-shadow:0.5px  0.5px 0.5px   gray;
 }
 
 main {
@@ -81,7 +83,7 @@ footer {
     padding-bottom: 30px;
     position: fixed;
     bottom: 0;
-    left: 0;
+    
 }
 
 button {

@@ -29,6 +29,8 @@ for (let i = 0; i < boxes.length; i++) {
             } else {
                 player2++
             }
+
+            checkWinCondiction()
         }
     })
 }
@@ -42,4 +44,8 @@ function checkEl(player1, player2) {
         el = o
     }
     return el
+}
+
+function checkWinCondiction()  {
+
 }

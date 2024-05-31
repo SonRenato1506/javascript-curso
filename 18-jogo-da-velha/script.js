@@ -28,6 +28,7 @@ for (let i = 0; i < boxes.length; i++) {
                 player1++
 
                 if(secondPlayer == "ai-player") {
+                
                     computerPlay()
                     player2++
                 }
@@ -243,10 +244,10 @@ function computerPlay() {
     filled = 0;
 
     for(let i = 0; i < boxes.length; i++) {
-        let randonNumber = Math.floor(Math.random() * 5)
+        let randomNumber = Math.floor(Math.random() * 5)
 
-        if(boxes [i].childNodes[0] == underfined){
-            if(randonNumber <= 1) {
+        if(boxes [i].childNodes[0] == undefined){
+            if(randomNumber <= 1) {
                 boxes[i].appendChild(cloneO)
                 counter++;
                 break;

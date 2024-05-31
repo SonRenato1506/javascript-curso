@@ -208,6 +208,9 @@ function declareWinner (winner) {
     if(winner == "x") {
         scoreboardX.textContent = parseInt(scoreboardX.textContent) + 1;
         msg = "O jogador 1 venceu!"
+    } else if(winner == 'o' && secondPlayer == 'ai-player') {
+        scoreboardY.textContent = parseInt(scoreboardY.textContent) + 1;
+        msg = "A IA Venceu!";
     } else if(winner == "o") {
         scoreboardY.textContent = parseInt(scoreboardY.textContent) + 1;
         msg = "O jogador 2 venceu!"

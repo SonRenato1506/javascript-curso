@@ -25,3 +25,5 @@ db.authenticate()
 app.get("/", (req, res) => {
     res.send("Está funcionando")
 })
+
+app.use("/jobs", require("./routes/jobs"))

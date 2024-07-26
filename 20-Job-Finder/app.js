@@ -1,4 +1,6 @@
 const express   = require("express")
+const exphbs    = require("express-handlebars")
+const path      = require("path")
 const app       = express()
 const db        = require("./db/connection.js")
 const bodyParse = require('body-parser')
@@ -11,6 +13,10 @@ app.listen(PORT, function() {
 
 //body parser
 app.use(bodyParse.urlencoded({extended: false}))
+
+//handle bars
+app.set("views", path.join(__dirname, "views"));
+
 
 // db connection
 db.authenticate()

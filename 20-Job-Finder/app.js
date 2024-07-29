@@ -16,6 +16,8 @@ app.use(bodyParse.urlencoded({extended: false}))
 
 //handle bars
 app.set("views", path.join(__dirname, "views"));
+app.engine('handlebars', exphbs({defaultLayout: "main"}))
+app.set("view engine", "handlebars")
 
 
 // db connection
